@@ -1,0 +1,141 @@
+.payment {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 409px;
+  height: 100vh;
+  z-index: 200;
+  background-color: #1f1d2b;
+  overflow-y: auto;
+}
+
+.paymentPanel {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 100vh;
+}
+
+.paymentTitle {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.paymentP {
+  color: rgba(171, 187, 194, 1);
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: -8px;
+}
+
+.paymentSection h4 {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.paymentMethods {
+  display: flex;
+  gap: 8px;
+}
+
+.methodBtn {
+  flex: 1;
+  padding: 12px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(57, 60, 73, 1);
+  background-color: rgba(31, 29, 43, 1);
+  color: rgba(171, 187, 194, 1);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.methodBtn img {
+  width: 24px;
+  height: 24px;
+}
+
+.methodBtn.active {
+  border-color: rgba(171, 187, 194, 1);
+  background-color: rgba(37, 40, 54, 1);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.inputGroup label {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.inputGroup input {
+  padding: 14px;
+  background-color: rgba(45, 48, 62, 1);
+  border: 1px solid rgba(57, 60, 73, 1);
+  border-radius: 8px;
+  color: rgba(224, 230, 233, 1);
+  font-size: 14px;
+  font-weight: 400;
+  outline: none;
+  width: 100%;
+}
+.inputGroup select {
+  padding: 14px;
+  background-color: rgba(45, 48, 62, 1);
+  border: 1px solid rgba(57, 60, 73, 1);
+  border-radius: 8px;
+
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  color: white;
+}
+
+.inputRow {
+  display: flex;
+  gap: 12px;
+}
+
+.paymentBtns {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.cancelBtn {
+  flex: 1;
+  padding: 14px;
+  background: transparent;
+  border: 1px solid rgba(234, 124, 105, 1);
+  color: rgba(234, 124, 105, 1);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.confirmBtn {
+  flex: 1;
+  padding: 14px;
+  background-color: rgba(234, 124, 105, 1);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.4);
+}

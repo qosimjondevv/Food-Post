@@ -1,0 +1,57 @@
+.Menu {
+  margin-top: 24px;
+}
+.menuCards {
+  margin-top: 98px;
+}
+.menuCardTitle h1 {
+  color: white;
+  font-weight: 600;
+  font-size: 28px;
+}
+.menuCard {
+  display: grid;
+  gap: 60px;
+  grid-template-columns: repeat(5, 200px);
+  /* margin-bottom: 100px; */
+  /* grid-template-columns: repeat(3, 1fr); */
+}
+.card {
+  max-width: 200px;
+  height: 230px;
+  background-color: rgba(31, 29, 43, 1);
+  position: relative;
+  padding-top: 118px;
+  border-radius: 16px;
+}
+.card img {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 140px;
+}
+.card_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card_text h4 {
+  max-width: 144px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+}
+.card_text p {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+}
+.card_text span {
+  color: rgba(171, 187, 194, 1);
+}

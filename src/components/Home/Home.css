@@ -1,0 +1,21 @@
+.ordersWrapper {
+  overflow: hidden;
+  transition: width 0.4s ease;
+}
+
+.ordersWrapper.open {
+  width: 409px;
+}
+.menu {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 0 24px;
+  overflow: hidden;
+}
+
+.homeWrapper {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}

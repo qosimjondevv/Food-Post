@@ -1,0 +1,275 @@
+.setting {
+  padding: 24px;
+  background-color: #252836;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.setting h1 {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+.setCards {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.setLeft {
+  width: 275px;
+  min-width: 275px;
+  background-color: rgba(31, 29, 43, 1);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.contendCard {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.contendCard.active {
+  background-color: rgba(234, 124, 105, 0.12);
+  border-right: 4px solid #ea7c69;
+}
+
+.contImg {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.contImg img {
+  width: 20px;
+  height: 20px;
+}
+
+.contentText h5 {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.contentText p {
+  color: rgba(171, 187, 194, 1);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.contendCard.active .contentText h5 {
+  color: #ea7c69;
+}
+
+/* /////////////////////////////////// right */
+.setRight {
+  flex: 1;
+  min-width: 0;
+  background-color: rgba(31, 29, 43, 1);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.productManagement {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
+.pmHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.productManagement h2 {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.manageBtn {
+  background: transparent;
+  border: 1px solid rgba(57, 60, 73, 1);
+  color: white;
+  padding: 14px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.pmTabs {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid rgba(57, 60, 73, 1);
+  padding-bottom: 0;
+  margin-bottom: 24px;
+}
+
+.pmTabs span {
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  font-size: 14px;
+  padding-bottom: 12px;
+  /* border-bottom: 2px solid transparent; */
+  font-weight: 600;
+}
+
+.pmTabs span.activeTab {
+  color: #ea7c69;
+  border-bottom: 2px solid #ea7c69;
+}
+
+.pmGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.pmGrid::-webkit-scrollbar {
+  width: 4px;
+}
+.pmGrid::-webkit-scrollbar-track {
+  background: #1f1d2b;
+}
+.pmGrid::-webkit-scrollbar-thumb {
+  background: #393c49;
+  border-radius: 4px;
+}
+
+.addCard {
+  border: 2px dashed #ea7c69;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(234, 124, 105, 1);
+  cursor: pointer;
+  height: 300px;
+}
+
+.addCard .plus {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.addCard p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.productCard {
+  height: 300px;
+  border-radius: 8px;
+  border: 1px solid rgba(57, 60, 73, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: #1f1d2b;
+}
+
+.productCard-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  flex: 1;
+  width: 100%;
+}
+
+.productCardImg {
+  width: 132px;
+  height: 132px;
+  /* object-fit: cover; */
+  border-radius: 50%;
+}
+
+.productCard h4 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 14px;
+}
+
+.productCard p {
+  color: rgba(171, 187, 194, 1);
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.productCard button {
+  background: #50343a;
+  border: none;
+  color: rgba(234, 124, 105, 1);
+  padding: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.editIcon {
+  width: 16px;
+  height: 16px;
+}
+.pmFooter {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.discardBtn {
+  background: transparent;
+  border: 1px solid rgba(234, 124, 105, 1);
+  color: rgba(234, 124, 105, 1);
+  padding: 14px 34px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+.saveBtn {
+  background: rgba(234, 124, 105, 1);
+  border: none;
+  color: white;
+  padding: 14px 43px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0px 8px 24px 0px rgba(234, 124, 105, 0.4);
+}

@@ -1,0 +1,206 @@
+.orderPanel {
+  width: 409px;
+  background-color: rgba(31, 29, 43, 1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.orderTitle {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.orderTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(57, 60, 73, 1);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: transparent;
+  color: rgba(234, 124, 105, 1);
+}
+
+.tab.active {
+  background-color: rgba(234, 124, 105, 1);
+  color: white;
+  border-color: rgba(234, 124, 105, 1);
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(57, 60, 73, 1);
+}
+
+.qtyy {
+  margin-left: 130px;
+}
+
+.orderList {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.orderList::-webkit-scrollbar {
+  display: none;
+}
+
+.orderItem {
+  margin-bottom: 24px;
+}
+
+.orderRow-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.orderItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.orderImg {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.orderName {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  max-width: 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.orderPrice {
+  color: rgba(171, 187, 194, 1);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.orderQty {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 48px;
+  height: 48px;
+  background-color: rgba(45, 48, 62, 1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orderRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.orderRow-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.orderNote::placeholder {
+  color: rgba(224, 230, 233, 1);
+}
+
+.orderTotal {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 55px;
+  text-align: right;
+}
+
+.deleteBtn {
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: 1px solid rgba(255, 124, 163, 1);
+  border-radius: 8px;
+  padding: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.deleteBtn img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.orderNote {
+  width: 100%;
+  padding: 14px;
+  background-color: rgba(45, 48, 62, 1);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.orderNote::placeholder {
+  color: rgba(59, 81, 98, 1);
+}
+
+.orderFooter {
+  padding-top: 16px;
+  margin-top: 12px;
+}
+
+.orderRow {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(171, 187, 194, 1);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.orderRow b {
+  color: white;
+  font-size: 16px;
+}
+
+.payBtn {
+  width: 100%;
+  padding: 14px;
+  background-color: rgba(234, 124, 105, 1);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.4);
+}

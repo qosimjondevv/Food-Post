@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Barlow";
+  src: url("./assets/fonts/Barlow-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./assets/fonts/Barlow-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./assets/fonts/Barlow-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #252836;
+  font-family: "Barlow", sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+.app {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+.menuScroll {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.menuScroll::-webkit-scrollbar {
+  display: none;
+}
+.menu {
+  flex: 1;
+  min-width: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 0 24px;
+  overflow: hidden;
+}
+
+.homeWrapper {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.ordersWrapper {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.4s ease;
+}
+
+.ordersWrapper.open {
+  width: 409px;
+}
