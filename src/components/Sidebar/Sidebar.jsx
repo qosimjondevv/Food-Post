@@ -9,7 +9,46 @@ import iconNotificator from "../../assets/icons/Notification.svg";
 import iconSetting from "../../assets/icons/Setting.svg";
 import iconLogOut from "../../assets/icons/LogOut.svg";
 
-function Sidebar() {
+const menu_links = [
+  {
+    id: 1,
+    title: "Home",
+    icon: iconHome,
+    path: "/",
+  },
+  {
+    id: 2,
+    title: "Discount",
+    icon: iconDicount,
+    path: "/discount",
+  },
+  {
+    id: 3,
+    title: "Dashboard",
+    icon: iconDashboard,
+    path: "/dashboard",
+  },
+  {
+    id: 4,
+    title: "Message",
+    icon: iconMessage,
+    path: "/message",
+  },
+  {
+    id: 5,
+    title: "Notification",
+    icon: iconNotificator,
+    path: "/notification",
+  },
+  {
+    id: 6,
+    title: "Setting",
+    icon: iconSetting,
+    path: "/setting",
+  },
+];
+
+export const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="siteLogo">
@@ -19,60 +58,17 @@ function Sidebar() {
       </div>
 
       <div className="sidebarMiddle">
-        <NavLink
-          to="/"
-          end
-          className={({ isActive }) =>
-            isActive ? "iconSidebar active" : "iconSidebar"
-          }
-        >
-          <img src={iconHome} />
-        </NavLink>
-
-        <NavLink
-          to="/discount"
-          className={({ isActive }) =>
-            isActive ? "iconSidebar active" : "iconSidebar"
-          }
-        >
-          <img src={iconDicount} />
-        </NavLink>
-
-        <NavLink
-          to="/dashboard"
-          className={({ isActive }) =>
-            isActive ? "iconSidebar active" : "iconSidebar"
-          }
-        >
-          <img src={iconDashboard} />
-        </NavLink>
-
-        <NavLink
-          to="/message"
-          className={({ isActive }) =>
-            isActive ? "iconSidebar active" : "iconSidebar"
-          }
-        >
-          <img src={iconMessage} />
-        </NavLink>
-
-        <NavLink
-          to="/notification"
-          className={({ isActive }) =>
-            isActive ? "iconSidebar active" : "iconSidebar"
-          }
-        >
-          <img src={iconNotificator} />
-        </NavLink>
-
-        <NavLink
-          to="/settings"
-          className={({ isActive }) =>
-            isActive ? "iconSidebar active" : "iconSidebar"
-          }
-        >
-          <img src={iconSetting} />
-        </NavLink>
+        {menu_links.map((item) => (
+          <NavLink
+            key={item.id}
+            to={item.path}
+            className={({ isActive }) =>
+              isActive ? "iconSidebar active" : "iconSidebar"
+            }
+          >
+            <img src={item.icon} />
+          </NavLink>
+        ))}
       </div>
 
       <div className="sidebarBottom">
@@ -87,6 +83,4 @@ function Sidebar() {
       </div>
     </div>
   );
-}
-
-export default Sidebar;
+};

@@ -17,6 +17,10 @@ import { AppContex } from "./components/Contex/AppContex";
 
 function App() {
   const { pament } = useContext(AppContex);
+  // const [menuCategoriy, setmenuCategoriy] = useState("All"); // Imloviy xatolarni to'g'irlash
+  // const [orders, setOrders] = useState([]);
+  // const [payment, setPament] = useState(false);
+
   return (
     <BrowserRouter>
       <div className="app">
@@ -35,6 +39,13 @@ function App() {
         </div>
 
         {pament && <Payment />}
+        {/* {payment && ( // Buniyam ichkariga obkirish kere
+          <Payment
+            orders={orders}
+            setOrders={setOrders}
+            setPament={setPament}
+          />
+        )} */}
       </div>
     </BrowserRouter>
   );

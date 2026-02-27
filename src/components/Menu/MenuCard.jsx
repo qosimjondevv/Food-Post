@@ -4,13 +4,8 @@ import hotLanch from "../../assets/img/hotLanch.svg";
 import poNiovqati from "../../assets/img/poNiovqati.svg";
 import quyuLagman from "../../assets/img/quyuLagman.svg";
 import tuqum from "../../assets/img/tuqum.svg";
-import { useContext } from "react";
-import { AppContex } from "../Contex/AppContex";
-function MenuCard() {
 
-  
-  const { menuCategoriy, orders, setOrders } = useContext(AppContex);
-
+function MenuCard({ menuCategoriy, orders, setOrders }) {
   const dishes = [
     {
       id: 1,
@@ -62,12 +57,25 @@ function MenuCard() {
     },
   ];
 
+  // const [foods, setFoods] = useState(dishes);
+
+
   const filterDishes =
     menuCategoriy === "All"
       ? dishes
       : dishes.filter((item) => item.category === menuCategoriy);
 
-  function addOrders(item) {
+  console.log({ filterDishes, menuCategoriy })
+
+  // const handleFilter = (category) => {
+  //   if (category === "All") {
+  //     setFoods(dishes);
+  //   } else {
+  //     setFoods(dishes.filter((item) => item.category === category));
+  //   }
+  // };
+
+  const addOrder = (item) => {
     const buyurtma = orders.find((or) => or.id === item.id);
 
     if (buyurtma) {
@@ -82,7 +90,8 @@ function MenuCard() {
       const newItem = { ...item, qty: 1 };
       setOrders([...orders, newItem]);
     }
-  }
+  };
+
   return (
     <>
       <div className="Menu">
@@ -96,7 +105,7 @@ function MenuCard() {
               <div
                 className="card"
                 key={item.id}
-                onClick={() => addOrders(item)}
+                onClick={() => addOrder(item)}
               >
                 <img src={item.Image} alt="" />
                 <div className="card_text">

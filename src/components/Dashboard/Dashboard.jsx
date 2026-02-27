@@ -13,6 +13,9 @@ import imgSuyulagman from "../../assets/img/suyuLagmon.svg";
 import imgQuyulagman from "../../assets/img/quyuLagman.svg";
 import imgManti from "../../assets/img/poNiovqati.svg";
 import imgCircle from "../../assets/icons/Circle.svg";
+
+// Componentlarga ajratish
+
 function Dashboard() {
   return (
     <>
@@ -229,7 +232,6 @@ function Dashboard() {
                 <div className="imgd">
                   <img src={imgCircle} alt="" />
                 </div>
-
 
                 <div className="bottomInfo">
                   <div className="titlesBottom">

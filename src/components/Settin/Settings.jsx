@@ -62,6 +62,7 @@ function Settings() {
       desc: "Find out more about Posly",
     },
   ];
+
   return (
     <div className="setting">
       <h1>Settings</h1>

@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import Header from "../Header/Header";
 import MenuCard from "../Menu/MenuCard";
-import Orders from "../Orders/Orders";
+import { Orders } from "../Orders/Orders";
 import "./Home.css";
 import { AppContex } from "../Contex/AppContex";
 

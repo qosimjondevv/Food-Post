@@ -3,14 +3,15 @@ import iconDelete from "../../assets/icons/deleteQizil.svg";
 import { useContext } from "react";
 import { AppContex } from "../Contex/AppContex";
 
-function Orders() {
+
+export const Orders = () => {
   const { orders, setOrders, setPament } = useContext(AppContex);
+  const total = orders.reduce((sum, or) => sum + or.qty * or.price, 0);
 
   const removeItem = (id) => {
     const filterDele = orders.filter((or) => or.id !== id);
     setOrders(filterDele);
   };
-  const total = orders.reduce((sum, or) => sum + or.qty * or.price, 0);
 
   return (
     <>
@@ -32,6 +33,7 @@ function Orders() {
         <div className="orderList">
           {orders.map((item) => (
             <div className="orderItem" key={item.id}>
+              {/* Boshqa component*/}
               <div className="orderRow-top">
                 <div className="orderItemLeft">
                   <img src={item.Image} alt="" className="orderImg" />
@@ -45,7 +47,6 @@ function Orders() {
                   $ {(item.qty * item.price).toFixed(2)}
                 </span>
               </div>
-
               <div className="orderRow-bottom">
                 <input
                   className="orderNote"
@@ -79,5 +80,4 @@ function Orders() {
       </div>
     </>
   );
-}
-export default Orders;
+};
