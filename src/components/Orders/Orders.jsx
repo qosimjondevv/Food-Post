@@ -1,7 +1,11 @@
 import "./Orders.css";
 import iconDelete from "../../assets/icons/deleteQizil.svg";
+import { useContext } from "react";
+import { AppContex } from "../Contex/AppContex";
 
-function Orders({ orders, setOrders, setPament }) {
+function Orders() {
+  const { orders, setOrders, setPament } = useContext(AppContex);
+
   const removeItem = (id) => {
     const filterDele = orders.filter((or) => or.id !== id);
     setOrders(filterDele);

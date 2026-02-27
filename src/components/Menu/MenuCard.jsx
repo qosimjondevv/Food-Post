@@ -4,7 +4,13 @@ import hotLanch from "../../assets/img/hotLanch.svg";
 import poNiovqati from "../../assets/img/poNiovqati.svg";
 import quyuLagman from "../../assets/img/quyuLagman.svg";
 import tuqum from "../../assets/img/tuqum.svg";
-function MenuCard({ menuCategoriy, orders, setOrders }) {
+import { useContext } from "react";
+import { AppContex } from "../Contex/AppContex";
+function MenuCard() {
+
+  
+  const { menuCategoriy, orders, setOrders } = useContext(AppContex);
+
   const dishes = [
     {
       id: 1,

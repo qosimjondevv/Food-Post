@@ -2,11 +2,11 @@ import "./Payment.css";
 import iconCreditCard from "../../assets/icons/CreditCard.svg";
 import iconPaypal from "../../assets/icons/Paypal.svg";
 import iconCash from "../../assets/icons/Cash.svg";
-import { useState } from "react";
+import { useContext } from "react";
+import { AppContex } from "../Contex/AppContex";
 
-function Payment({ orders, setOrders, setPament }) {
-  const [activeCard, setActiveCard] = useState("credit");
-  // const total = orders.reduce((sum, or) => sum + or.qty * or.price, 0);
+function Payment() {
+  const { setPament, total, activeCard, setActiveCard } = useContext(AppContex);
 
   return (
     <>

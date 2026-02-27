@@ -1,16 +1,13 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Header from "../Header/Header";
 import MenuCard from "../Menu/MenuCard";
 import Orders from "../Orders/Orders";
 import "./Home.css";
+import { AppContex } from "../Contex/AppContex";
 
-function HomePage({
-  menuCategoriy,
-  setmenuCategoriy,
-  orders,
-  setOrders,
-  setPament,
-}) {
+function HomePage() {
+  const { orders, setPament } = useContext(AppContex);
+
   useEffect(() => {
     return () => {
       setPament(false);
@@ -20,23 +17,14 @@ function HomePage({
   return (
     <div className="homeWrapper">
       <div className="menu">
-        <Header
-          menuCategoriy={menuCategoriy}
-          setmenuCategoriy={setmenuCategoriy}
-        />
+        <Header />
         <div className="menuScroll">
-          <MenuCard
-            menuCategoriy={menuCategoriy}
-            orders={orders}
-            setOrders={setOrders}
-          />
+          <MenuCard />
         </div>
       </div>
 
       <div className={`ordersWrapper ${orders.length > 0 ? "open" : ""}`}>
-        {orders.length > 0 && (
-          <Orders orders={orders} setOrders={setOrders} setPament={setPament} />
-        )}
+        {orders.length > 0 && <Orders />}
       </div>
     </div>
   );

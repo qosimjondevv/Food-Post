@@ -23,7 +23,12 @@
   position: relative;
   padding-top: 118px;
   border-radius: 16px;
+  cursor: pointer;
 }
+/* .card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 7px rgba(234, 124, 105, 1);
+} */
 .card img {
   position: absolute;
   top: -50px;

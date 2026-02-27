@@ -7,18 +7,16 @@ import {
   LogOut,
   Message,
   Notification,
-  Orders,
+  // Orders,
   Payment,
   Settings,
   Sidebar,
 } from "./components";
-import { useState } from "react";
+import { useContext } from "react";
+import { AppContex } from "./components/Contex/AppContex";
 
 function App() {
-  const [menuCategoriy, setmenuCategoriy] = useState("All");
-  const [orders, setOrders] = useState([]);
-  const [payment, setPament] = useState(false);
-
+  const { pament } = useContext(AppContex);
   return (
     <BrowserRouter>
       <div className="app">
@@ -26,18 +24,7 @@ function App() {
 
         <div className="content">
           <Routes>
-            <Route
-              path="/"
-              element={
-                <HomePage
-                  menuCategoriy={menuCategoriy}
-                  setmenuCategoriy={setmenuCategoriy}
-                  orders={orders}
-                  setOrders={setOrders}
-                  setPament={setPament}
-                />
-              }
-            />
+            <Route path="/" element={<HomePage />} />
             <Route path="/discount" element={<Discount />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/message" element={<Message />} />
@@ -47,13 +34,7 @@ function App() {
           </Routes>
         </div>
 
-        {payment && (
-          <Payment
-            orders={orders}
-            setOrders={setOrders}
-            setPament={setPament}
-          />
-        )}
+        {pament && <Payment />}
       </div>
     </BrowserRouter>
   );
